@@ -5,7 +5,7 @@ interface UploadEntry {
   data: Record<string, any>;
 }
 
-export default function DataList() {
+export default function DataList({ refresh }: { refresh: number }) {
   const [data, setData] = useState<UploadEntry[]>([]);
   const [headers, setHeaders] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -35,7 +35,7 @@ export default function DataList() {
     };
 
     fetchData();
-  }, [page, searchTerm]);
+  }, [page, searchTerm, refresh]);
 
   return (
     <div>

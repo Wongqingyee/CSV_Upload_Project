@@ -12,7 +12,3 @@ app.use("/", uploadRouter);
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
-
-app.get("/ping", (req, res) => {
-  res.json({ message: "pong" });
-});
