@@ -16,21 +16,21 @@ To get started with local development, follow these steps:
 - In the frontend folder, run npm start in the terminal.
 - In the backend/src folder, run npx ts-node index.ts.
 
-Backend Requirements
+### Backend Requirements
 
 - Create a table named uploads in PSQL:
 
 CREATE TABLE uploads (
-id SERIAL PRIMARY KEY,
-data JSONB
+  id SERIAL PRIMARY KEY,
+  data JSONB
 );
 
 - In backend/src/upload.ts, configure your database connection like this:
 
 const pool = new Pool({
-user: "postgres",
-host: "localhost",
-database: "postgres",
-password: "", // Set your DB password if needed
-port: 5432,
+  user: "postgres",
+  host: "localhost",
+  database: "postgres",  
+  password: "", // Set your DB password if needed
+  port: 5432,
 });
